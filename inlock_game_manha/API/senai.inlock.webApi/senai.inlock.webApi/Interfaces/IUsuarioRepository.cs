@@ -18,5 +18,6 @@ namespace senai.inlock.webApi.Interfaces
         /// </summary>
         /// <param name="novoUsuario"> Novo usuário cadastrado</param>
         void Cadastrar(UsuarioDomain novoUsuario);
+        UsuarioDomain Login(string email, string senha);
     }
 }

@@ -6,6 +6,8 @@ SELECT * FROM Estudio
 
 SELECT * FROM Jogo
 
+SELECT * FROM tipoUsuario
+
 SELECT nomeJogo, nomeEstudio FROM Jogo 
 INNER JOIN Estudio
 ON Jogo.idEstudio = Estudio.idEstudio
@@ -23,3 +25,4 @@ WHERE idJogo = 2
 
 SELECT * FROM Estudio
 WHERE idEstudio = 2
+
