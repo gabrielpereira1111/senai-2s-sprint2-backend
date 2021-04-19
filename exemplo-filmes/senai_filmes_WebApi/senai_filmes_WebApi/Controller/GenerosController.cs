@@ -52,6 +52,11 @@ namespace senai_filmes_WebApi.Controller
             return Ok(listaGeneros);
         }
 
+        /// <summary>
+        /// Lista o genero a partir do id
+        /// </summary>
+        /// <param name="id">id do gênero</param>
+        /// <returns>Gênero correspondente ao id</returns>
         [Authorize] //O Usuário precisa estar logado
         [HttpGet("{id}")]
 
@@ -74,6 +79,11 @@ namespace senai_filmes_WebApi.Controller
             return Ok(generoBuscado);
         }
         
+        /// <summary>
+        /// Atualiza o Gênero
+        /// </summary>
+        /// <param name="generoAtualizado">Gênero que será analisado</param>
+        /// <returns>Gênero atualizado</returns>
         [Authorize(Roles ="administrador")] //Somente o administrado pode atualizar um usuário
         [HttpPut]
 

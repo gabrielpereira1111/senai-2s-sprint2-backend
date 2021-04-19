@@ -26,7 +26,11 @@ namespace senai_filmes_WebApi.Controller
         
         }
 
-        
+        /// <summary>
+        /// Fazer o login
+        /// </summary>
+        /// <param name="login">Credenciais necessárias para fazer login</param>
+        /// <returns>Token</returns>
         [HttpPost]
         public IActionResult Login(UsuarioDomain login)
         {
