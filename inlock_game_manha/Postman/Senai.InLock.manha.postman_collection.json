@@ -1,0 +1,128 @@
+{
+	"info": {
+		"_postman_id": "4a66eecc-2dfa-4fb7-a735-be96ecdfa5a6",
+		"name": "Senai.InLock.manha",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Estudio.ListarTodos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/estudio",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"estudio"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Estudio.Cadastrar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/estudio",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"estudio"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Jogo.ListarTodos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/jogo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"jogo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Jogo.Cadastrar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nomeJogo\": \"Assassin's Creed Valhalla\",\r\n    \"descricao\": \"é um jogo mundo aberto de ação e aventura stealth\",\r\n    \"dataLancamento\": \"2020-10-11T00:00:00\",\r\n    \"valor\": 259.89,\r\n    \"idEstudio\": 4\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/jogo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"jogo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Usuario.Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"admin@admin.com\",\r\n    \"senha\": \"admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/usuario/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"usuario",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
