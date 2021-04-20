@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using senai.inlock.webApi.Domains;
 using senai.inlock.webApi.Interfaces;
@@ -22,6 +23,11 @@ namespace senai.inlock.webApi.Controllers
             _jogoRepository = new JogoRepository();
         }
 
+        /// <summary>
+        /// Lista todos os jogos
+        /// </summary>
+        /// <returns> Lista de jogos</returns>
+        [Authorize]
         [HttpGet]
 
         public IActionResult Get()
@@ -30,6 +36,12 @@ namespace senai.inlock.webApi.Controllers
             return Ok(listaJogo);
         }
 
+        /// <summary>
+        /// Cadastra um novo jogo
+        /// </summary>
+        /// <param name="novoJogo">Jogo que será cadastrado</param>
+        /// <returns> Status Code Created</returns>
+        [Authorize(Roles = "1")]
         [HttpPost]
         public IActionResult Cadastrar(JogoDomain novoJogo)
         {
