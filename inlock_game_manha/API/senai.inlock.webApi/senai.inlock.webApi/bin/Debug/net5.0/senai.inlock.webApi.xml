@@ -1,0 +1,123 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>senai.inlock.webApi</name>
+    </assembly>
+    <members>
+        <member name="M:senai.inlock.webApi.Controllers.EstudioController.Get">
+            <summary>
+            Lista todos os estudios
+            </summary>
+            <returns>Lista de estudios</returns>
+        </member>
+        <member name="M:senai.inlock.webApi.Controllers.EstudioController.Cadastrar(senai.inlock.webApi.Domains.EstudioDomain)">
+            <summary>
+            Cadastra um novo estudio
+            </summary>
+            <param name="novoEstudio">novo estudio cadastrado</param>
+            <returns>Status Code 201</returns>
+        </member>
+        <member name="M:senai.inlock.webApi.Controllers.JogoController.Get">
+            <summary>
+            Lista todos os jogos
+            </summary>
+            <returns> Lista de jogos</returns>
+        </member>
+        <member name="M:senai.inlock.webApi.Controllers.JogoController.Cadastrar(senai.inlock.webApi.Domains.JogoDomain)">
+            <summary>
+            Cadastra um novo jogo
+            </summary>
+            <param name="novoJogo">Jogo que será cadastrado</param>
+            <returns> Status Code Created</returns>
+        </member>
+        <member name="M:senai.inlock.webApi.Controllers.tipoUsuarioController.Get">
+            <summary>
+            Lista todos os tipos de usuario
+            </summary>
+            <returns> Lista de todos os tipos de usuários</returns>
+        </member>
+        <member name="M:senai.inlock.webApi.Controllers.tipoUsuarioController.Cadastrar(senai.inlock.webApi.Domains.tipoUsuarioDomain)">
+            <summary>
+            Cadastrar novo usuário
+            </summary>
+            <param name="novoTipoUsuario"> nome do tipo de usuário</param>
+            <returns> Status Code Created</returns>
+        </member>
+        <member name="M:senai.inlock.webApi.Controllers.UsuarioController.Get">
+            <summary>
+            Lista todos os usuários
+            </summary>
+            <returns> Lista de usuários</returns>
+        </member>
+        <member name="M:senai.inlock.webApi.Controllers.UsuarioController.Cadastrar(senai.inlock.webApi.Domains.UsuarioDomain)">
+            <summary>
+            Cadastra um novo usuário
+            </summary>
+            <param name="novoUsuario"> novo usuário cadastrado</param>
+            <returns> Status Code 201(Created)</returns>
+        </member>
+        <member name="M:senai.inlock.webApi.Controllers.UsuarioController.Login(senai.inlock.webApi.Domains.UsuarioDomain)">
+            <summary>
+            Faz o login
+            </summary>
+            <param name="login">credenciais para login</param>
+            <returns>Token</returns>
+        </member>
+        <member name="M:senai.inlock.webApi.Interfaces.IEstudioRepository.ListarTodos">
+            <summary>
+            Listar todos os estúdios
+            </summary>
+            <returns>Lista de estúdios</returns>
+        </member>
+        <member name="M:senai.inlock.webApi.Interfaces.IEstudioRepository.Cadastrar(senai.inlock.webApi.Domains.EstudioDomain)">
+            <summary>
+            Cadastrar novo estúdio
+            </summary>
+            <param name="novoEstudio"> Estúdio cadastrado </param>
+        </member>
+        <member name="M:senai.inlock.webApi.Interfaces.IJogoRepository.ListarTodos">
+            <summary>
+            Lista todos os jogos
+            </summary>
+            <returns> Lista de jogos </returns>
+        </member>
+        <member name="M:senai.inlock.webApi.Interfaces.IJogoRepository.Cadastrar(senai.inlock.webApi.Domains.JogoDomain)">
+            <summary>
+            Cadastrar um jogo
+            </summary>
+            <param name="novoJogo"> Jogo cadastrado</param>
+        </member>
+        <member name="M:senai.inlock.webApi.Interfaces.ItipoUsuarioRepository.ListarTodos">
+            <summary>
+            Listar todos os tipos de usuário
+            </summary>
+            <returns> Lista de tipos de usuário</returns>
+        </member>
+        <member name="M:senai.inlock.webApi.Interfaces.ItipoUsuarioRepository.Cadastrar(senai.inlock.webApi.Domains.tipoUsuarioDomain)">
+            <summary>
+            Cadastra um novo tipo de usuário
+            </summary>
+            <param name="novoTipoUsuario">Novo tipo de usuário cadastrado</param>
+        </member>
+        <member name="M:senai.inlock.webApi.Interfaces.IUsuarioRepository.ListarTodos">
+            <summary>
+            Listar todos os usuários
+            </summary>
+            <returns>Lista de todos os usuários</returns>
+        </member>
+        <member name="M:senai.inlock.webApi.Interfaces.IUsuarioRepository.Cadastrar(senai.inlock.webApi.Domains.UsuarioDomain)">
+            <summary>
+            Cadastrar um novo usuário
+            </summary>
+            <param name="novoUsuario"> Novo usuário cadastrado</param>
+        </member>
+        <member name="M:senai.inlock.webApi.Interfaces.IUsuarioRepository.Login(System.String,System.String)">
+            <summary>
+            Fazer login
+            </summary>
+            <param name="email"> email do usuário</param>
+            <param name="senha"> senha do usuário</param>
+            <returns> Token </returns>
+        </member>
+    </members>
+</doc>
