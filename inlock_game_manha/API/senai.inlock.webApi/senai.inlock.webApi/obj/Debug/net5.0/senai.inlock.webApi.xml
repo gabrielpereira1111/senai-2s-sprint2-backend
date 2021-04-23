@@ -87,6 +87,12 @@
             </summary>
             <param name="novoJogo"> Jogo cadastrado</param>
         </member>
+        <member name="M:senai.inlock.webApi.Interfaces.IJogoRepository.ListarJogoEstudio">
+            <summary>
+            Listar todos os jogos e seus respectivos estudios
+            </summary>
+            <returns> lista de jogos e estudios </returns>
+        </member>
         <member name="M:senai.inlock.webApi.Interfaces.ItipoUsuarioRepository.ListarTodos">
             <summary>
             Listar todos os tipos de usuário

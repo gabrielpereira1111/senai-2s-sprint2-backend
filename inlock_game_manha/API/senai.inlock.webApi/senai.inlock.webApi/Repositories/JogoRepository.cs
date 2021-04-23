@@ -32,6 +32,8 @@ namespace senai.inlock.webApi.Repositories
             }
         }
 
+       
+
         public List<JogoDomain> ListarTodos()
         {
             List<JogoDomain> listaJogo = new List<JogoDomain>();

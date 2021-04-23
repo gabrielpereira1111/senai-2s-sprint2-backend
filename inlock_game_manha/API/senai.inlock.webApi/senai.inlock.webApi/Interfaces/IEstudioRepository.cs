@@ -18,5 +18,10 @@ namespace senai.inlock.webApi.Interfaces
         /// </summary>
         /// <param name="novoEstudio"> Estúdio cadastrado </param>
         void Cadastrar(EstudioDomain novoEstudio);
+        /// <summary>
+        /// Lista os estudios e seus respectivos jogos
+        /// </summary>
+        /// <returns> Uma lista de estudios com os seus jogos</returns>
+       
     }
 }

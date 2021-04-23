@@ -56,3 +56,6 @@ C:\Users\PICHAU\Desktop\RepoGitHub\senai-2s-sprint2-backend\ORM-Data First\senai
 C:\Users\PICHAU\Desktop\RepoGitHub\senai-2s-sprint2-backend\ORM-Data First\senai.locadora.webApi\senai.locadora.webApi\senai.locadora.webApi\obj\Debug\net5.0\ref\senai.locadora.webApi.dll
 C:\Users\PICHAU\Desktop\RepoGitHub\senai-2s-sprint2-backend\ORM-Data First\senai.locadora.webApi\senai.locadora.webApi\senai.locadora.webApi\obj\Debug\net5.0\senai.locadora.webApi.pdb
 C:\Users\PICHAU\Desktop\RepoGitHub\senai-2s-sprint2-backend\ORM-Data First\senai.locadora.webApi\senai.locadora.webApi\senai.locadora.webApi\obj\Debug\net5.0\senai.locadora.webApi.genruntimeconfig.cache
+C:\Users\PICHAU\Desktop\RepoGitHub\senai-2s-sprint2-backend\ORM-Data First\senai.locadora.webApi\senai.locadora.webApi\senai.locadora.webApi\bin\Debug\net5.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\PICHAU\Desktop\RepoGitHub\senai-2s-sprint2-backend\ORM-Data First\senai.locadora.webApi\senai.locadora.webApi\senai.locadora.webApi\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\PICHAU\Desktop\RepoGitHub\senai-2s-sprint2-backend\ORM-Data First\senai.locadora.webApi\senai.locadora.webApi\senai.locadora.webApi\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll
