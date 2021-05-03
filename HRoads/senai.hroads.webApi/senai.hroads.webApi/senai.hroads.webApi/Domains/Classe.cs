@@ -5,9 +5,9 @@ using System.Collections.Generic;
 
 namespace senai.hroads.webApi.Domains
 {
-    public partial class Class
+    public partial class Classe
     {
-        public Class()
+        public Classe()
         {
             ClassesHabilidades = new HashSet<ClassesHabilidade>();
             Personagens = new HashSet<Personagem>();

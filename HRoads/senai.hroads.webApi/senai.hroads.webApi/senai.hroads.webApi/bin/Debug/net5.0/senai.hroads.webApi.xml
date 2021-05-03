@@ -66,6 +66,14 @@
             <param name="id">Id do personagem que será deletado</param>
             <returns>Retorna Status Code 204 - NoContent</returns>
         </member>
+        <member name="M:senai.hroads.webApi.Controllers.PersonagemController.Put(System.Int32,senai.hroads.webApi.Domains.Personagem)">
+            <summary>
+            Atualizar um personagem
+            </summary>
+            <param name="id">Id do personagem que será atualizado</param>
+            <param name="personagem">Credenciais atualizadas do personagem</param>
+            <returns>Retorna um Status Code 204 - NoContent</returns>
+        </member>
         <member name="M:senai.hroads.webApi.Controllers.TipoHabilidadeController.Get">
             <summary>
             Listar os tipos da habilidade

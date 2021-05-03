@@ -11,7 +11,7 @@ namespace senai.hroads.webApi.Domains
         public int? IdClasses { get; set; }
         public int? IdHabilidades { get; set; }
 
-        public virtual Class IdClassesNavigation { get; set; }
+        public virtual Classe IdClassesNavigation { get; set; }
         public virtual Habilidade IdHabilidadesNavigation { get; set; }
     }
 }

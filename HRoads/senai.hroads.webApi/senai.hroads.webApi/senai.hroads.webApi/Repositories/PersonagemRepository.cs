@@ -14,12 +14,23 @@ namespace senai.hroads.webApi.Repositories
         HRoadsContext ctx = new HRoadsContext();
         public void Atualizar(int id, Personagem personagemAtualizado)
         {
-            throw new NotImplementedException();
+            Personagem personagemBuscado = BuscarPorId(id);
+
+            if (personagemBuscado != null)
+            {
+                personagemBuscado.Nome = personagemAtualizado.Nome;
+                personagemBuscado.QntMana = personagemAtualizado.QntMana;
+                personagemBuscado.QntVida = personagemAtualizado.QntVida;
+                personagemBuscado.DataAtualizacao = personagemAtualizado.DataAtualizacao;
+            }
+
+            ctx.Personagens.Update(personagemBuscado);
+            ctx.SaveChanges();
         }
 
         public Personagem BuscarPorId(int id)
         {
-            return ctx.Personagens.Include(p => p.IdClassesNavigation).FirstOrDefault(p => p.IdClasses == id);
+            return ctx.Personagens.Include(p => p.IdClassesNavigation).FirstOrDefault(p => p.IdPersonagens == id);
         }
 
         public void Cadastrar(Personagem novoPersonagem)

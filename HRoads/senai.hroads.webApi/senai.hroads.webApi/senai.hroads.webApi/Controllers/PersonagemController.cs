@@ -80,7 +80,7 @@ namespace senai.hroads.webApi.Controllers
             catch (Exception ex)
             {
                 return BadRequest(ex);
-                
+
             }
         }
 
@@ -101,7 +101,28 @@ namespace senai.hroads.webApi.Controllers
             catch (Exception ex)
             {
                 return BadRequest(ex);
-                
+
+            }
+        }
+
+        /// <summary>
+        /// Atualizar um personagem
+        /// </summary>
+        /// <param name="id">Id do personagem que será atualizado</param>
+        /// <param name="personagem">Credenciais atualizadas do personagem</param>
+        /// <returns>Retorna um Status Code 204 - NoContent</returns>
+        [HttpPut("{id}")]
+        [Authorize(Roles = "2")]
+        public IActionResult Put(int id, Personagem personagem)
+        {
+            try
+            {
+                _personagemRepository.Atualizar(id, personagem);
+                return NoContent();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex);
             }
         }
     }
