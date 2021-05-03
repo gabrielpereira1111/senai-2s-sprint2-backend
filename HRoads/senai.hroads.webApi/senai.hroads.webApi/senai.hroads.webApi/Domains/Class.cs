@@ -10,13 +10,13 @@ namespace senai.hroads.webApi.Domains
         public Class()
         {
             ClassesHabilidades = new HashSet<ClassesHabilidade>();
-            Personagens = new HashSet<Personagen>();
+            Personagens = new HashSet<Personagem>();
         }
 
         public int IdClasses { get; set; }
         public string Nome { get; set; }
 
         public virtual ICollection<ClassesHabilidade> ClassesHabilidades { get; set; }
-        public virtual ICollection<Personagen> Personagens { get; set; }
+        public virtual ICollection<Personagem> Personagens { get; set; }
     }
 }

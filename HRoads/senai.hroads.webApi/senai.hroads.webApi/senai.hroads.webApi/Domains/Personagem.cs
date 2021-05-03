@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace senai.hroads.webApi.Domains
 {
-    public partial class Personagen
+    public partial class Personagem
     {
         public int IdPersonagens { get; set; }
         public int? IdClasses { get; set; }

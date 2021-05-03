@@ -27,7 +27,17 @@ namespace senai.hroads.webApi.Repositories
 
         public Usuario BuscarPorID(int id)
         {
-            return ctx.Usuarios.FirstOrDefault(u => u.IdUsuarios == id);
+            return ctx.Usuarios.Select(u => new Usuario 
+            {
+                IdUsuarios = u.IdUsuarios,
+                Email = u.Email,
+                IdTipoUsuarioNavigation = new TipoUsuario 
+                {
+                    Titulo = u.IdTipoUsuarioNavigation.Titulo,
+                    IdTipoUsuario = u.IdTipoUsuarioNavigation.IdTipoUsuario
+                }
+
+            }).FirstOrDefault(u => u.IdUsuarios == id);
         }
 
         public void Cadastrar(Usuario novoUsuario)
@@ -44,12 +54,21 @@ namespace senai.hroads.webApi.Repositories
 
         public List<Usuario> ListarTudo()
         {
-            return ctx.Usuarios.Include(u => u.IdTipoUsuarioNavigation).ToList();
+            return ctx.Usuarios.Include(u => u.IdTipoUsuarioNavigation).Select(u => new Usuario 
+            {
+                IdUsuarios = u.IdUsuarios,
+                Email = u.Email,
+                IdTipoUsuarioNavigation = new TipoUsuario
+                {
+                    IdTipoUsuario = u.IdTipoUsuario,
+                    Titulo = u.IdTipoUsuarioNavigation.Titulo
+                }
+            }).ToList();
         }
             
         public Usuario Login(string email, string senha)
         {
-            throw new NotImplementedException();
+            return ctx.Usuarios.FirstOrDefault(u => u.Email == email && u.Senha == senha);
         }
     }
 }

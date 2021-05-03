@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using senai.hroads.webApi.Domains;
 using senai.hroads.webApi.Interfaces;
@@ -65,6 +66,7 @@ namespace senai.hroads.webApi.Controllers
         /// <param name="novoTipoHabilidade">Credenciais do novo tipo de habilidade</param>
         /// <returns>Status Code 201 - Created</returns>
         [HttpPost]
+        [Authorize(Roles = "1")]
         public IActionResult Post(TiposHabilidade novoTipoHabilidade)
         {
             try

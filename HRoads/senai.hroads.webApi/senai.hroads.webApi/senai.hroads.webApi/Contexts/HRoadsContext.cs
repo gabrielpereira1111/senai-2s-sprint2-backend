@@ -21,7 +21,7 @@ namespace senai.hroads.webApi.Contexts
         public virtual DbSet<Class> Classes { get; set; }
         public virtual DbSet<ClassesHabilidade> ClassesHabilidades { get; set; }
         public virtual DbSet<Habilidade> Habilidades { get; set; }
-        public virtual DbSet<Personagen> Personagens { get; set; }
+        public virtual DbSet<Personagem> Personagens { get; set; }
         public virtual DbSet<TipoUsuario> TipoUsuarios { get; set; }
         public virtual DbSet<TiposHabilidade> TiposHabilidades { get; set; }
         public virtual DbSet<Usuario> Usuarios { get; set; }
@@ -94,7 +94,7 @@ namespace senai.hroads.webApi.Contexts
                     .HasConstraintName("FK__Habilidad__idTip__38996AB5");
             });
 
-            modelBuilder.Entity<Personagen>(entity =>
+            modelBuilder.Entity<Personagem>(entity =>
             {
                 entity.HasKey(e => e.IdPersonagens)
                     .HasName("PK__Personag__F43A00D17AF5AD0D");

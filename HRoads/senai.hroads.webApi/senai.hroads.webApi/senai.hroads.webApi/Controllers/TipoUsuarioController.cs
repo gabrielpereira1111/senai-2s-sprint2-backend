@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using senai.hroads.webApi.Domains;
 using senai.hroads.webApi.Interfaces;
@@ -26,6 +27,7 @@ namespace senai.hroads.webApi.Controllers
         /// </summary>
         /// <returns>Um Status Code 200 - OK</returns>
         [HttpGet]
+        [Authorize(Roles = "1")]
         public IActionResult Get()
         {
             try
@@ -43,6 +45,7 @@ namespace senai.hroads.webApi.Controllers
         /// <param name="id">Id do tipo de usuário</param>
         /// <returns>Status Code 200 - OK</returns>
         [HttpGet("{id}")]
+        [Authorize(Roles = "1")]
         public IActionResult GetById(int id) 
         {
             try
@@ -60,6 +63,7 @@ namespace senai.hroads.webApi.Controllers
         /// <param name="novoTipoUsuario">Credenciais do novoTipoUsuario</param>
         /// <returns>Status Code 201 - Created</returns>
         [HttpPost]
+        [Authorize(Roles = "1")]
         public IActionResult Post(TipoUsuario novoTipoUsuario)
         {
             try
@@ -79,6 +83,7 @@ namespace senai.hroads.webApi.Controllers
         /// <param name="id">id do tipoUsuario que será deletado</param>
         /// <returns>Status Code 204 - NoContent</returns>
         [HttpDelete("{id}")]
+        [Authorize(Roles = "1")]
         public IActionResult Delete(int id)
         {
             try
@@ -92,7 +97,14 @@ namespace senai.hroads.webApi.Controllers
                 
             }
         }
+        /// <summary>
+        /// Atualizar um tipoUsuario
+        /// </summary>
+        /// <param name="id">id do tipoUsuario que será atualizado</param>
+        /// <param name="tipoUsuarioAtualizado">Credenciais do tipoUsuarioAtualizado</param>
+        /// <returns></returns>
         [HttpPut("{id}")]
+        [Authorize(Roles = "1")]
         public IActionResult Update(int id, TipoUsuario tipoUsuarioAtualizado)
         {
             try

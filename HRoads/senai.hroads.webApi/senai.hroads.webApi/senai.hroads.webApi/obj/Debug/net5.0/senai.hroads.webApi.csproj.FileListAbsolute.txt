@@ -62,3 +62,10 @@ C:\Users\PICHAU\Desktop\RepoGitHub\senai-2s-sprint2-backend\HRoads\senai.hroads.
 C:\Users\PICHAU\Desktop\RepoGitHub\senai-2s-sprint2-backend\HRoads\senai.hroads.webApi\senai.hroads.webApi\senai.hroads.webApi\obj\Debug\net5.0\ref\senai.hroads.webApi.dll
 C:\Users\PICHAU\Desktop\RepoGitHub\senai-2s-sprint2-backend\HRoads\senai.hroads.webApi\senai.hroads.webApi\senai.hroads.webApi\obj\Debug\net5.0\senai.hroads.webApi.pdb
 C:\Users\PICHAU\Desktop\RepoGitHub\senai-2s-sprint2-backend\HRoads\senai.hroads.webApi\senai.hroads.webApi\senai.hroads.webApi\obj\Debug\net5.0\senai.hroads.webApi.genruntimeconfig.cache
+C:\Users\PICHAU\Desktop\RepoGitHub\senai-2s-sprint2-backend\HRoads\senai.hroads.webApi\senai.hroads.webApi\senai.hroads.webApi\bin\Debug\net5.0\senai.hroads.webApi.xml
+C:\Users\PICHAU\Desktop\RepoGitHub\senai-2s-sprint2-backend\HRoads\senai.hroads.webApi\senai.hroads.webApi\senai.hroads.webApi\bin\Debug\net5.0\Microsoft.OpenApi.dll
+C:\Users\PICHAU\Desktop\RepoGitHub\senai-2s-sprint2-backend\HRoads\senai.hroads.webApi\senai.hroads.webApi\senai.hroads.webApi\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\PICHAU\Desktop\RepoGitHub\senai-2s-sprint2-backend\HRoads\senai.hroads.webApi\senai.hroads.webApi\senai.hroads.webApi\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\PICHAU\Desktop\RepoGitHub\senai-2s-sprint2-backend\HRoads\senai.hroads.webApi\senai.hroads.webApi\senai.hroads.webApi\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\PICHAU\Desktop\RepoGitHub\senai-2s-sprint2-backend\HRoads\senai.hroads.webApi\senai.hroads.webApi\senai.hroads.webApi\obj\Debug\net5.0\senai.hroads.webApi.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\PICHAU\Desktop\RepoGitHub\senai-2s-sprint2-backend\HRoads\senai.hroads.webApi\senai.hroads.webApi\senai.hroads.webApi\obj\Debug\net5.0\senai.hroads.webApi.xml

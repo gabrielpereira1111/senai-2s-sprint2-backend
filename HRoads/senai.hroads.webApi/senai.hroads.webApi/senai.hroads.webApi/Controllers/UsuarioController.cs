@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using senai.hroads.webApi.Domains;
 using senai.hroads.webApi.Interfaces;
@@ -26,6 +27,7 @@ namespace senai.hroads.webApi.Controllers
         /// </summary>
         /// <returns>Status Code 200 - OK</returns>
         [HttpGet]
+        [Authorize(Roles = "1")]
         public IActionResult Get()
         {
             try
@@ -45,6 +47,7 @@ namespace senai.hroads.webApi.Controllers
         /// <param name="id">id do usuário que será buscado</param>
         /// <returns>Status Code 200 - OK</returns>
         [HttpGet("{id}")]
+        [Authorize(Roles = "1")]
         public IActionResult GetById(int id)
         {
             try
@@ -64,6 +67,7 @@ namespace senai.hroads.webApi.Controllers
         /// <param name="novoUsuario">Credenciais desse novo usuário</param>
         /// <returns>Status Code 201 - Created</returns>
         [HttpPost]
+        [Authorize(Roles = "1")]
         public IActionResult Post(Usuario novoUsuario)
         {
             try
@@ -83,6 +87,7 @@ namespace senai.hroads.webApi.Controllers
         /// <param name="id">Id do usuário que será deletado</param>
         /// <returns>Status Content 204 - No Content</returns>
         [HttpDelete("{id}")]
+        [Authorize(Roles = "1")]
         public IActionResult Delete(int id)
         {
             try
@@ -103,6 +108,7 @@ namespace senai.hroads.webApi.Controllers
         /// <param name="usuarioAtualizado">Credenciais atualizadas do usuário</param>
         /// <returns>Status Code 204 - No Content</returns>
         [HttpPut("{id}")]
+        [Authorize(Roles = "1")]
         public IActionResult Update(int id, Usuario usuarioAtualizado)
         {
             try

@@ -10,7 +10,7 @@ namespace senai.hroads.webApi.Domains
         public int IdUsuarios { get; set; }
         public string Email { get; set; }
         public string Senha { get; set; }
-        public int? IdTipoUsuario { get; set; }
+        public int IdTipoUsuario { get; set; }
 
         public virtual TipoUsuario IdTipoUsuarioNavigation { get; set; }
     }
