@@ -65,3 +65,5 @@ C:\Users\PICHAU\Desktop\RepoGitHub\senai-2s-sprint2-backend\SPMedGroup\senai.spm
 C:\Users\PICHAU\Desktop\RepoGitHub\senai-2s-sprint2-backend\SPMedGroup\senai.spmed.webApi\senai.spmed.webApi\obj\Debug\net5.0\ref\senai.spmed.webApi.dll
 C:\Users\PICHAU\Desktop\RepoGitHub\senai-2s-sprint2-backend\SPMedGroup\senai.spmed.webApi\senai.spmed.webApi\obj\Debug\net5.0\senai.spmed.webApi.pdb
 C:\Users\PICHAU\Desktop\RepoGitHub\senai-2s-sprint2-backend\SPMedGroup\senai.spmed.webApi\senai.spmed.webApi\obj\Debug\net5.0\senai.spmed.webApi.genruntimeconfig.cache
+C:\Users\PICHAU\Desktop\RepoGitHub\senai-2s-sprint2-backend\SPMedGroup\senai.spmed.webApi\senai.spmed.webApi\bin\Debug\net5.0\senai.spmed.webApi.xml
+C:\Users\PICHAU\Desktop\RepoGitHub\senai-2s-sprint2-backend\SPMedGroup\senai.spmed.webApi\senai.spmed.webApi\obj\Debug\net5.0\senai.spmed.webApi.xml

@@ -1,0 +1,296 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>senai.spmed.webApi</name>
+    </assembly>
+    <members>
+        <member name="M:senai.spmed.webApi.Controllers.UsuarioController.Get">
+            <summary>
+            Lista todos os usuários
+            </summary>
+            <returns>Lista de todos os usuários junto com um Status Code 200 - Ok</returns>
+        </member>
+        <member name="M:senai.spmed.webApi.Controllers.UsuarioController.GetById(System.Int32)">
+            <summary>
+            Busca por um usuário através do Id
+            </summary>
+            <param name="id">Id do usuário</param>
+            <returns>Retorna um usuário buscado junto com um Status Code 200 - Ok</returns>
+        </member>
+        <member name="M:senai.spmed.webApi.Controllers.UsuarioController.Post(senai.spmed.webApi.Domains.Usuario)">
+            <summary>
+            Cadastrar um novo usuário
+            </summary>
+            <param name="novoUsuario">Credenciais do usuário cadastrado</param>
+            <returns>Retorna um Status Code 201 - Created</returns>
+        </member>
+        <member name="M:senai.spmed.webApi.Controllers.UsuarioController.Delete(System.Int32)">
+            <summary>
+            Deleta um usuário
+            </summary>
+            <param name="id">Id do usuário que será deletado</param>
+            <returns>Retorna um StatusCode 204 - NoContent</returns>
+        </member>
+        <member name="M:senai.spmed.webApi.Controllers.UsuarioController.Put(System.Int32,senai.spmed.webApi.Domains.Usuario)">
+            <summary>
+            Atualiza os dados de um usuário
+            </summary>
+            <param name="id">Id do usuário que será atualizado</param>
+            <param name="usuarioAtualizado">Dados atualizados do usuário que será atualizado</param>
+            <returns>Retorna um StatusCode 204 - NoContent</returns>
+        </member>
+        <member name="M:senai.spmed.webApi.Interfaces.IClinicaRepository.Cadastrar(senai.spmed.webApi.Domains.Clinica)">
+            <summary>
+            Cadastra uma nova clínica
+            </summary>
+            <param name="novaClinica">Credenciais da nova clínica</param>
+        </member>
+        <member name="M:senai.spmed.webApi.Interfaces.IClinicaRepository.ListarTudo">
+            <summary>
+            Lista de todas as clínicas
+            </summary>
+            <returns>Retorna uma lista de clínicas</returns>
+        </member>
+        <member name="M:senai.spmed.webApi.Interfaces.IClinicaRepository.BuscarPorId(System.Int32)">
+            <summary>
+            Busca por uma clínica através de seu Id
+            </summary>
+            <param name="id">Id da clínica buscada</param>
+            <returns>Retorna uma clínica</returns>
+        </member>
+        <member name="M:senai.spmed.webApi.Interfaces.IClinicaRepository.Atualizar(System.Int32,senai.spmed.webApi.Domains.Clinica)">
+            <summary>
+            Atualiza uma clínica
+            </summary>
+            <param name="id">Id da clínica</param>
+            <param name="clinicaAtualizada">Credenciais atualizadas da clínica</param>
+        </member>
+        <member name="M:senai.spmed.webApi.Interfaces.IClinicaRepository.Deletar(System.Int32)">
+            <summary>
+            Deleta uma clínica
+            </summary>
+            <param name="id">Id da clínica</param>
+        </member>
+        <member name="M:senai.spmed.webApi.Interfaces.IConsultaRepository.Cadastrar(senai.spmed.webApi.Domains.Consulta)">
+            <summary>
+            Cadastra uma nova consulta
+            </summary>
+            <param name="novaConsulta">Credenciais da nova consulta</param>
+        </member>
+        <member name="M:senai.spmed.webApi.Interfaces.IConsultaRepository.ListarTudo">
+            <summary>
+            Lista todas as consultas
+            </summary>
+            <returns>Retorna uma lista de consulta</returns>
+        </member>
+        <member name="M:senai.spmed.webApi.Interfaces.IConsultaRepository.BuscarPorId(System.Int32)">
+            <summary>
+            Busca por uma consulta através do Id
+            </summary>
+            <param name="id">Id da consulta</param>
+            <returns>Retorna uma consulta</returns>
+        </member>
+        <member name="M:senai.spmed.webApi.Interfaces.IConsultaRepository.Atualizar(System.Int32,senai.spmed.webApi.Domains.Consulta)">
+            <summary>
+            Atualiza uma consulta
+            </summary>
+            <param name="id">Id da consulta</param>
+            <param name="consultaAtualizada">Credenciais atualizadas da consulta</param>
+        </member>
+        <member name="M:senai.spmed.webApi.Interfaces.IConsultaRepository.Deletar(System.Int32)">
+            <summary>
+            Deleta uma consulta
+            </summary>
+            <param name="id">Id da consulta que será deletada</param>
+        </member>
+        <member name="M:senai.spmed.webApi.Interfaces.IConsultaRepository.atualizarSituacao(System.Int32,System.String)">
+            <summary>
+            Atualiza a situação da consulta
+            </summary>
+            <param name="id">Id da consulta</param>
+            <param name="situacao">Situação da consulta</param>
+        </member>
+        <member name="M:senai.spmed.webApi.Interfaces.IConsultaRepository.listarMedicos(System.Int32)">
+            <summary>
+            Lista as consultas associadas a um determinado medico
+            </summary>
+            <param name="id">Id do médico</param>
+            <returns>Retorna uma lista de consultas associadas a um médico</returns>
+        </member>
+        <member name="M:senai.spmed.webApi.Interfaces.IConsultaRepository.listarPacientes(System.Int32)">
+            <summary>
+            Lista consultas de um determinado paciente
+            </summary>
+            <param name="id">Id do paciente</param>
+            <returns>Retorna uma lista de consultas de um determinado paciente</returns>
+        </member>
+        <member name="M:senai.spmed.webApi.Interfaces.IEspecialidadeRepository.Cadastrar(senai.spmed.webApi.Domains.Especialidade)">
+            <summary>
+            Cadastra uma nova especialidade
+            </summary>
+            <param name="novaEspecialidade">Credenciais da nova especialidade</param>
+        </member>
+        <member name="M:senai.spmed.webApi.Interfaces.IEspecialidadeRepository.ListarTudo">
+            <summary>
+            Lista todas as especialidades
+            </summary>
+            <returns>Retorna uma lista de especialidades</returns>
+        </member>
+        <member name="M:senai.spmed.webApi.Interfaces.IEspecialidadeRepository.BuscarPorId(System.Int32)">
+            <summary>
+            Buscar por um especialidade
+            </summary>
+            <param name="id">Id da especialidade que será buscada</param>
+            <returns></returns>
+        </member>
+        <member name="M:senai.spmed.webApi.Interfaces.IEspecialidadeRepository.Atualizar(System.Int32,senai.spmed.webApi.Domains.Especialidade)">
+            <summary>
+            Atualiza uma especialidade
+            </summary>
+            <param name="id">Id da especialidade</param>
+            <param name="especialidadeAtualizada">Credenciais atualizadas da especialidade</param>
+        </member>
+        <member name="M:senai.spmed.webApi.Interfaces.IEspecialidadeRepository.Deletar(System.Int32)">
+            <summary>
+            Deleta uma especialidade
+            </summary>
+            <param name="id">Id da especialidade que será deletada</param>
+        </member>
+        <member name="M:senai.spmed.webApi.Interfaces.IMedicoRepository.Cadastrar(senai.spmed.webApi.Domains.Medico)">
+            <summary>
+            Cadastra um novo médico
+            </summary>
+            <param name="novoMedico">Credenciais do médico cadastrado</param>
+        </member>
+        <member name="M:senai.spmed.webApi.Interfaces.IMedicoRepository.ListarTudo">
+            <summary>
+            Lista todos os médicos
+            </summary>
+            <returns>Retorna uma lista de médicos</returns>
+        </member>
+        <member name="M:senai.spmed.webApi.Interfaces.IMedicoRepository.BuscarPorId(System.Int32)">
+            <summary>
+            Busca por um médico através de seu Id
+            </summary>
+            <param name="id">Id do médico buscado</param>
+            <returns>Retorna um médico</returns>
+        </member>
+        <member name="M:senai.spmed.webApi.Interfaces.IMedicoRepository.Atualizar(System.Int32,senai.spmed.webApi.Domains.Medico)">
+            <summary>
+            Atualiza as credenciais de um médico
+            </summary>
+            <param name="id">Id do médico que terá suas credenciais atualizadas</param>
+            <param name="medicoAtualizado">Credenciais atualizadas do médico</param>
+        </member>
+        <member name="M:senai.spmed.webApi.Interfaces.IMedicoRepository.Deletar(System.Int32)">
+            <summary>
+            Deleta um médico
+            </summary>
+            <param name="id">Id do médico que terá suas credenciais deletadas</param>
+        </member>
+        <member name="M:senai.spmed.webApi.Interfaces.IPacienteRepository.Cadastrar(senai.spmed.webApi.Domains.Paciente)">
+            <summary>
+            Cadastra um novo paciente
+            </summary>
+            <param name="novoPaciente">Credenciais do novo paciente</param>
+        </member>
+        <member name="M:senai.spmed.webApi.Interfaces.IPacienteRepository.ListarTudo">
+            <summary>
+            Lista todos os pacientes
+            </summary>
+            <returns>Retorna uma lista de pacientes</returns>
+        </member>
+        <member name="M:senai.spmed.webApi.Interfaces.IPacienteRepository.BuscarPorId(System.Int32)">
+            <summary>
+            Busca um paciente através de seu Id
+            </summary>
+            <param name="id">Id do paciente buscado</param>
+            <returns>Retorna um paciente</returns>
+        </member>
+        <member name="M:senai.spmed.webApi.Interfaces.IPacienteRepository.Atualizar(System.Int32,senai.spmed.webApi.Domains.Paciente)">
+            <summary>
+            Atualiza um paciente
+            </summary>
+            <param name="id">Id do paciente que será atualizado</param>
+            <param name="pacienteAtualizado">Credenciais atualizadas do paciente</param>
+        </member>
+        <member name="M:senai.spmed.webApi.Interfaces.IPacienteRepository.Deletar(System.Int32)">
+            <summary>
+            Deleta um paciente
+            </summary>
+            <param name="id">Id do paciente que será deletado</param>
+        </member>
+        <member name="M:senai.spmed.webApi.Interfaces.ITipoUsuarioRepository.Cadastrar(senai.spmed.webApi.Domains.TiposUsuario)">
+            <summary>
+            Cadastra um novo tipo de usuário
+            </summary>
+            <param name="novoTipoUsuario">Credenciais do novo tipo de usuário</param>
+        </member>
+        <member name="M:senai.spmed.webApi.Interfaces.ITipoUsuarioRepository.ListarTudo">
+            <summary>
+            Lista todos os tipos de usuário
+            </summary>
+            <returns>Retorna uma lista de tipos de usuários</returns>
+        </member>
+        <member name="M:senai.spmed.webApi.Interfaces.ITipoUsuarioRepository.BuscarPorId(System.Int32)">
+            <summary>
+            Busca um usuário através de seu Id
+            </summary>
+            <param name="id">Id do usuário que será buscado</param>
+            <returns>Retorna um tipo de usuário</returns>
+        </member>
+        <member name="M:senai.spmed.webApi.Interfaces.ITipoUsuarioRepository.Atualizar(System.Int32,senai.spmed.webApi.Domains.TiposUsuario)">
+            <summary>
+            Atualiza um tipo de usuário
+            </summary>
+            <param name="id">Id do usuário que será atualizado</param>
+            <param name="tipoUsuarioAtualizado">Credenciais atualizadas do tipo de usuário</param>
+        </member>
+        <member name="M:senai.spmed.webApi.Interfaces.ITipoUsuarioRepository.Deletar(System.Int32)">
+            <summary>
+            Deleta um tipo de usuário
+            </summary>
+            <param name="id">Id do usuário que será deletado</param>
+        </member>
+        <member name="M:senai.spmed.webApi.Interfaces.IUsuarioRepository.Cadastrar(senai.spmed.webApi.Domains.Usuario)">
+            <summary>
+            Cadastra um novo usuário
+            </summary>
+            <param name="novoUsuario">Credenciais do novo usuário</param>
+        </member>
+        <member name="M:senai.spmed.webApi.Interfaces.IUsuarioRepository.ListarTudo">
+            <summary>
+            Lista todos os usuários
+            </summary>
+            <returns>Retorna uma lista de usuários</returns>
+        </member>
+        <member name="M:senai.spmed.webApi.Interfaces.IUsuarioRepository.BuscarPorId(System.Int32)">
+            <summary>
+            Busca um usuário através de seu Id
+            </summary>
+            <param name="id">Id do usuário buscado</param>
+            <returns>Retorna o usuário buscado</returns>
+        </member>
+        <member name="M:senai.spmed.webApi.Interfaces.IUsuarioRepository.Atualizar(System.Int32,senai.spmed.webApi.Domains.Usuario)">
+            <summary>
+            Atualiza um usuário
+            </summary>
+            <param name="id">Id do usuário que será atualizado</param>
+            <param name="usuarioAtualizado">Credenciais atualizadas do usuário que será atualizado</param>
+        </member>
+        <member name="M:senai.spmed.webApi.Interfaces.IUsuarioRepository.Deletar(System.Int32)">
+            <summary>
+            Deleta um usuário
+            </summary>
+            <param name="id">Id do usuário que será deletado</param>
+        </member>
+        <member name="M:senai.spmed.webApi.Interfaces.IUsuarioRepository.Login(System.String,System.String)">
+            <summary>
+            Faz o login
+            </summary>
+            <param name="email">Email do usuário</param>
+            <param name="senha">Senha do usuário</param>
+            <returns>Retorna um usuário</returns>
+        </member>
+    </members>
+</doc>

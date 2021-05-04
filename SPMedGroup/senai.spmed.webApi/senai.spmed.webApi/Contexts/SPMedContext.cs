@@ -105,6 +105,7 @@ namespace senai.spmed.webApi.Contexts
                     .HasMaxLength(100)
                     .IsUnicode(false)
                     .HasColumnName("situacao");
+                
 
                 entity.HasOne(d => d.IdmedicosNavigation)
                     .WithMany(p => p.Consulta)
