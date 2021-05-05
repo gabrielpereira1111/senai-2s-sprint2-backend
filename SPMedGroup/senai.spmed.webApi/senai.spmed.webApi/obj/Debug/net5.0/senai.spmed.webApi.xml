@@ -67,6 +67,40 @@
             <param name="situacao">situação da consulta</param>
             <returns></returns>
         </member>
+        <member name="M:senai.spmed.webApi.Controllers.ConsultaController.Post(System.DateTime)">
+            <summary>
+            Cadastra uma nova consulta
+            </summary>
+            <returns>Status Code 201 - Created</returns>
+        </member>
+        <member name="M:senai.spmed.webApi.Controllers.ConsultaController.Delete(System.Int32)">
+            <summary>
+            Deleta uma consulta
+            </summary>
+            <param name="id">Id da consulta</param>
+            <returns>Um Status Code 204</returns>
+        </member>
+        <member name="M:senai.spmed.webApi.Controllers.ConsultaController.Put(System.Int32,senai.spmed.webApi.Domains.Consulta)">
+            <summary>
+            Atualiza um consulta
+            </summary>
+            <param name="id">Id da consulta</param>
+            <param name="consultaAtualizada">Dados da consulta</param>
+            <returns>Status Code 204 - NoContent</returns>
+        </member>
+        <member name="M:senai.spmed.webApi.Controllers.ConsultaController.Get">
+            <summary>
+            Lista todas as consultas
+            </summary>
+            <returns>Uma lista de consultas e um Status Code 200 - Ok</returns>
+        </member>
+        <member name="M:senai.spmed.webApi.Controllers.ConsultaController.GetById(System.Int32)">
+            <summary>
+            Busca por uma consulta através de seu Id
+            </summary>
+            <param name="id">Id da consulta</param>
+            <returns>Uma consulta e um Status Code 200 - Ok</returns>
+        </member>
         <member name="M:senai.spmed.webApi.Controllers.EspecialidadeController.Get">
             <summary>
             Lista todos as especialidades
@@ -280,12 +314,6 @@
             Deleta uma clínica
             </summary>
             <param name="id">Id da clínica</param>
-        </member>
-        <member name="M:senai.spmed.webApi.Interfaces.IConsultaRepository.Cadastrar(senai.spmed.webApi.Domains.Consulta)">
-            <summary>
-            Cadastra uma nova consulta
-            </summary>
-            <param name="novaConsulta">Credenciais da nova consulta</param>
         </member>
         <member name="M:senai.spmed.webApi.Interfaces.IConsultaRepository.ListarTudo">
             <summary>

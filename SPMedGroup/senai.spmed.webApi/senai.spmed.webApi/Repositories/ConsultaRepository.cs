@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.ChangeTracking;
 using senai.spmed.webApi.Contexts;
 using senai.spmed.webApi.Domains;
 using senai.spmed.webApi.Interfaces;
@@ -14,7 +15,19 @@ namespace senai.spmed.webApi.Repositories
         SPMedContext ctx = new SPMedContext();
         public void Atualizar(int id, Consulta consultaAtualizada)
         {
-            throw new NotImplementedException();
+            Consulta consultaBuscada = ctx.Consultas.Find(id);
+            if (consultaBuscada != null)
+            {
+                if (consultaAtualizada.Idmedicos != null)
+                {
+                    consultaBuscada.Idmedicos = consultaAtualizada.Idmedicos;
+                }
+
+                consultaBuscada.DataConsulta = consultaAtualizada.DataConsulta;
+            }
+
+            ctx.Consultas.Update(consultaBuscada);
+            ctx.SaveChanges();
         }
 
         public void atualizarSituacao(int id, string situacao)
@@ -47,17 +60,23 @@ namespace senai.spmed.webApi.Repositories
 
         public Consulta BuscarPorId(int id)
         {
-            throw new NotImplementedException();
+            return ctx.Consultas
+                .Include(c => c.IdmedicosNavigation)
+                .Include(c => c.IdpacientesNavigation)
+                .FirstOrDefault(c => c.Idconsultas == id);
         }
 
         public void Cadastrar(Consulta novaConsulta)
         {
-            throw new NotImplementedException();
+            ctx.Consultas.Add(novaConsulta);
+            ctx.SaveChanges();
+
         }
 
         public void Deletar(int id)
         {
-            throw new NotImplementedException();
+            ctx.Consultas.Remove(BuscarPorId(id));
+            ctx.SaveChanges();
         }
 
         public void descricaoConsulta(int id, Consulta descricao)
@@ -97,7 +116,34 @@ namespace senai.spmed.webApi.Repositories
 
         public List<Consulta> ListarTudo()
         {
-            throw new NotImplementedException();
+            return ctx.Consultas
+                .Include(c => c.IdmedicosNavigation)
+                .Include(c => c.IdpacientesNavigation)
+                .Select(c => new Consulta
+                {
+                    Idconsultas = c.Idconsultas,
+                    Idmedicos = c.Idmedicos,
+                    Idpacientes = c.Idpacientes,
+                    DataConsulta = c.DataConsulta,
+                    IdmedicosNavigation = new Medico
+                    {
+                        Idmedicos = c.IdmedicosNavigation.Idmedicos,
+                        Nome = c.IdmedicosNavigation.Nome,
+                        IdespecialidadesNavigation = new Especialidade
+                        {
+                            Idespecialidades = c.IdmedicosNavigation.IdespecialidadesNavigation.Idespecialidades,
+                            Nome = c.IdmedicosNavigation.IdespecialidadesNavigation.Nome
+                        }
+                    },
+                    IdpacientesNavigation = new Paciente
+                    {
+                        Idpacientes = c.IdpacientesNavigation.Idpacientes,
+                        Idusuarios = c.IdpacientesNavigation.Idusuarios,
+                        Nome = c.IdpacientesNavigation.Nome
+                    }
+                })
+                .ToList();
+
         }
     }
 }

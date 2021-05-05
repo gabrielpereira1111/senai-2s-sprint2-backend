@@ -23,7 +23,7 @@ namespace senai.spmed.webApi.Controllers
         {
             _consultaRepository = new ConsultaRepository();
         }
-        
+
         /// <summary>
         /// Lista todas as consultas de determinado paciente
         /// </summary>
@@ -42,7 +42,7 @@ namespace senai.spmed.webApi.Controllers
             catch (Exception ex)
             {
 
-                return BadRequest(new 
+                return BadRequest(new
                 {
                     mensagem = "Não é possível mostrar as consultas se você não estiver logado!",
                     ex
@@ -69,7 +69,7 @@ namespace senai.spmed.webApi.Controllers
             catch (Exception ex)
             {
 
-                return BadRequest(new 
+                return BadRequest(new
                 {
                     mensagem = "Não é possível mostrar as consultas se você não estiver logado!",
                     ex
@@ -84,6 +84,7 @@ namespace senai.spmed.webApi.Controllers
         /// <param name="descricao">descrição</param>
         /// <returns>Status Code 204 - NoContent</returns>
         [HttpPatch("descricao/{id}")]
+        [Authorize(Roles = "3")]
         public IActionResult Patch(int id, Consulta descricao)
         {
             try
@@ -106,6 +107,7 @@ namespace senai.spmed.webApi.Controllers
         /// <param name="situacao">situação da consulta</param>
         /// <returns></returns>
         [HttpPatch("situacao/{id}")]
+        [Authorize(Roles = "1")]
         public IActionResult PatchSituation(int id, Consulta situacao)
         {
             try
@@ -119,5 +121,111 @@ namespace senai.spmed.webApi.Controllers
                 return BadRequest(ex);
             }
         }
+
+        /// <summary>
+        /// Cadastra uma nova consulta
+        /// </summary>
+        /// <returns>Status Code 201 - Created</returns>
+        [HttpPost]
+        [Authorize(Roles = "1")]
+        public IActionResult Post(Consulta consulta)
+        {
+            try
+            {
+
+
+                _consultaRepository.Cadastrar(consulta);
+                return StatusCode(201);
+            }
+            catch (Exception ex)
+            {
+
+                return BadRequest(ex);
+            }
+        }
+
+        /// <summary>
+        /// Deleta uma consulta
+        /// </summary>
+        /// <param name="id">Id da consulta</param>
+        /// <returns>Um Status Code 204</returns>
+        [HttpDelete("{id}")]
+        [Authorize(Roles = "1")]
+        public IActionResult Delete(int id)
+        {
+            try
+            {
+                _consultaRepository.Deletar(id);
+                return NoContent();
+            }
+            catch (Exception ex)
+            {
+
+                return BadRequest(ex);
+            }
+        }
+
+        /// <summary>
+        /// Atualiza um consulta
+        /// </summary>
+        /// <param name="id">Id da consulta</param>
+        /// <param name="consultaAtualizada">Dados da consulta</param>
+        /// <returns>Status Code 204 - NoContent</returns>
+        [HttpPut("{id}")]
+        [Authorize(Roles = "1")]
+        public IActionResult Put(int id, Consulta consultaAtualizada)
+        {
+            try
+            {
+                _consultaRepository.Atualizar(id, consultaAtualizada);
+                return NoContent();
+            }
+            catch (Exception ex)
+            {
+
+                return BadRequest(ex);
+            }
+        }
+
+        /// <summary>
+        /// Lista todas as consultas
+        /// </summary>
+        /// <returns>Uma lista de consultas e um Status Code 200 - Ok</returns>
+        [HttpGet]
+        [Authorize(Roles = "1")]
+        public IActionResult Get()
+        {
+            try
+            {
+                return Ok(_consultaRepository.ListarTudo());
+            }
+            catch (Exception ex)
+            {
+
+                return BadRequest(ex);
+            }
+        }
+
+        /// <summary>
+        /// Busca por uma consulta através de seu Id
+        /// </summary>
+        /// <param name="id">Id da consulta</param>
+        /// <returns>Uma consulta e um Status Code 200 - Ok</returns>
+        [HttpGet("{id}")]
+        [Authorize(Roles = "1")]
+        public IActionResult GetById(int id)
+        {
+            try
+            {
+                return Ok(_consultaRepository.BuscarPorId(id));
+            }
+            catch (Exception ex)
+            {
+
+                return BadRequest(ex);
+            }
+        }
     }
+
+    
 }

@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using senai.spmed.webApi.Domains;
 using senai.spmed.webApi.Interfaces;
@@ -27,6 +28,7 @@ namespace senai.spmed.webApi.Controllers
         /// </summary>
         /// <returns>Retorna uma lista de clínicas e um Status Code 200 - Ok</returns>
         [HttpGet]
+        [Authorize(Roles = "1")]
         public IActionResult Get()
         {
             try
@@ -46,6 +48,7 @@ namespace senai.spmed.webApi.Controllers
         /// <param name="id">Id da clínica buscada</param>
         /// <returns>Retorna uma clínica e um Status Code 200 - Ok</returns>
         [HttpGet("{id}")]
+        [Authorize(Roles = "1")]
         public IActionResult GetById(int id)
         {
             try
@@ -64,6 +67,7 @@ namespace senai.spmed.webApi.Controllers
         /// <param name="novaClinica">Dados da nova clínica</param>
         /// <returns>Status Code 201 - Created</returns>
         [HttpPost]
+        [Authorize(Roles = "1")]
         public IActionResult Post(Clinica novaClinica)
         {
             try
@@ -84,6 +88,7 @@ namespace senai.spmed.webApi.Controllers
         /// <param name="id">Id da clínica que será deletada</param>
         /// <returns>Status Code 204 - NoContent</returns>
         [HttpDelete("{id}")]
+        [Authorize(Roles = "1")]
         public IActionResult Delete(int id)
         {
             try
@@ -106,6 +111,7 @@ namespace senai.spmed.webApi.Controllers
         /// <param name="clinicaAtualizada">Dados da clínica</param>
         /// <returns>Status Code 204 - NoContent</returns>
         [HttpPut("{id}")]
+        [Authorize(Roles = "1")]
         public IActionResult Put(int id, Clinica clinicaAtualizada)
         {
             try

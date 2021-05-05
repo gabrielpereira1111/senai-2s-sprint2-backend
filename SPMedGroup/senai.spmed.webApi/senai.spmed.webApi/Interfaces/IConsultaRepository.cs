@@ -8,10 +8,6 @@ namespace senai.spmed.webApi.Interfaces
 {
     interface IConsultaRepository
     {
-        /// <summary>
-        /// Cadastra uma nova consulta
-        /// </summary>
-        /// <param name="novaConsulta">Credenciais da nova consulta</param>
         void Cadastrar(Consulta novaConsulta);
         /// <summary>
         /// Lista todas as consultas
