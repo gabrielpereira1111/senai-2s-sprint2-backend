@@ -67,7 +67,7 @@
             <param name="situacao">situação da consulta</param>
             <returns></returns>
         </member>
-        <member name="M:senai.spmed.webApi.Controllers.ConsultaController.Post(System.DateTime)">
+        <member name="M:senai.spmed.webApi.Controllers.ConsultaController.Post(senai.spmed.webApi.Domains.Consulta)">
             <summary>
             Cadastra uma nova consulta
             </summary>

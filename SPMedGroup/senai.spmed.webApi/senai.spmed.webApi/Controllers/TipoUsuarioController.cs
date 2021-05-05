@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using senai.spmed.webApi.Domains;
 using senai.spmed.webApi.Interfaces;
@@ -27,6 +28,7 @@ namespace senai.spmed.webApi.Controllers
         /// </summary>
         /// <returns>Retorna um Status Code 200 - Ok junto com uma lista de tipos de usuários</returns>
         [HttpGet]
+        [Authorize(Roles = "1")]
         public IActionResult Get() 
         {
             try
@@ -46,6 +48,7 @@ namespace senai.spmed.webApi.Controllers
         /// <param name="id">Id do tipo de usuário</param>
         /// <returns>Retorna um usuário junto com um Status Code 200 - OK</returns>
         [HttpGet("{id}")]
+        [Authorize(Roles = "1")]
         public IActionResult GetById(int id)
         {
             try
@@ -65,6 +68,7 @@ namespace senai.spmed.webApi.Controllers
         /// <param name="novoTipoUsuario">Dados do novo tipo de usuário</param>
         /// <returns>Retorna um Status Code 201 - Created</returns>
         [HttpPost]
+        [Authorize(Roles = "1")]
         public IActionResult Post(TiposUsuario novoTipoUsuario)
         {
             try
@@ -85,6 +89,7 @@ namespace senai.spmed.webApi.Controllers
         /// <param name="id">Id do tipo de usuário buscado</param>
         /// <returns>Retorna um Status Code 204 - NoContent</returns>
         [HttpDelete("{id}")]
+        [Authorize(Roles = "1")]
         public IActionResult Delete(int id)
         {
             try
@@ -106,6 +111,7 @@ namespace senai.spmed.webApi.Controllers
         /// <param name="tipoUsuario">Dados atualizados do tipo de usuário</param>
         /// <returns>Retorna um Status Code 204 - NoContent</returns>
         [HttpPut("{id}")]
+        [Authorize(Roles = "1")]
         public IActionResult Put(int id, TiposUsuario tipoUsuario)
         {
             try
