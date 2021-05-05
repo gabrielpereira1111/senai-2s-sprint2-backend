@@ -4,12 +4,152 @@
         <name>senai.spmed.webApi</name>
     </assembly>
     <members>
+        <member name="M:senai.spmed.webApi.Controllers.ClinicaController.Get">
+            <summary>
+            Listar todas as clínicas
+            </summary>
+            <returns>Retorna uma lista de clínicas e um Status Code 200 - Ok</returns>
+        </member>
+        <member name="M:senai.spmed.webApi.Controllers.ClinicaController.GetById(System.Int32)">
+            <summary>
+            Busca uma clínica através de seu Id
+            </summary>
+            <param name="id">Id da clínica buscada</param>
+            <returns>Retorna uma clínica e um Status Code 200 - Ok</returns>
+        </member>
+        <member name="M:senai.spmed.webApi.Controllers.ClinicaController.Post(senai.spmed.webApi.Domains.Clinica)">
+            <summary>
+            Cadastra uma nova clínica
+            </summary>
+            <param name="novaClinica">Dados da nova clínica</param>
+            <returns>Status Code 201 - Created</returns>
+        </member>
+        <member name="M:senai.spmed.webApi.Controllers.ClinicaController.Delete(System.Int32)">
+            <summary>
+            Deleta uma clínica
+            </summary>
+            <param name="id">Id da clínica que será deletada</param>
+            <returns>Status Code 204 - NoContent</returns>
+        </member>
+        <member name="M:senai.spmed.webApi.Controllers.ClinicaController.Put(System.Int32,senai.spmed.webApi.Domains.Clinica)">
+            <summary>
+            Atualiza os dados de uma clínica
+            </summary>
+            <param name="id">Id da clínica</param>
+            <param name="clinicaAtualizada">Dados da clínica</param>
+            <returns>Status Code 204 - NoContent</returns>
+        </member>
+        <member name="M:senai.spmed.webApi.Controllers.EspecialidadeController.Get">
+            <summary>
+            Lista todos as especialidades
+            </summary>
+            <returns>Retorna uma lista junto com um Status Code 201 - Ok</returns>
+        </member>
+        <member name="M:senai.spmed.webApi.Controllers.EspecialidadeController.GetById(System.Int32)">
+            <summary>
+            Busca por uma especialidade através de um Id
+            </summary>
+            <param name="id">Id da especialidade</param>
+            <returns>Status Code 201 - Ok</returns>
+        </member>
+        <member name="M:senai.spmed.webApi.Controllers.EspecialidadeController.Post(senai.spmed.webApi.Domains.Especialidade)">
+            <summary>
+            Cadastra uma nova especialidade
+            </summary>
+            <param name="novaEspecialidade">Dados da nova especialidade</param>
+            <returns>Status Code 201 - Created</returns>
+        </member>
+        <member name="M:senai.spmed.webApi.Controllers.EspecialidadeController.Delete(System.Int32)">
+            <summary>
+            Deleta uma especialidade
+            </summary>
+            <param name="id">Id da especialidade</param>
+            <returns>Status Code 204 - NoContent</returns>
+        </member>
+        <member name="M:senai.spmed.webApi.Controllers.EspecialidadeController.Put(System.Int32,senai.spmed.webApi.Domains.Especialidade)">
+            <summary>
+            Atualiza uma especialidade
+            </summary>
+            <param name="id">Id da especialidade</param>
+            <param name="especialidadeAtualizada">Dados atualizados da especialidade</param>
+            <returns>Status Code 204 - NoContent</returns>
+        </member>
         <member name="M:senai.spmed.webApi.Controllers.LoginController.Login(senai.spmed.webApi.ViewModel.LoginViewModel)">
             <summary>
             Faz o login do usuário
             </summary>
             <param name="login">Credenciais necessárias para o login</param>
             <returns></returns>
+        </member>
+        <member name="M:senai.spmed.webApi.Controllers.MedicoController.Get">
+            <summary>
+            Lista todos os médicos
+            </summary>
+            <returns>Uma lista de médicos junto com um Status Code 201 - Created</returns>
+        </member>
+        <member name="M:senai.spmed.webApi.Controllers.MedicoController.GetById(System.Int32)">
+            <summary>
+            Buscar por um médico atravéd do Id
+            </summary>
+            <param name="id">Id do médico buscado</param>
+            <returns></returns>
+        </member>
+        <member name="M:senai.spmed.webApi.Controllers.MedicoController.Post(senai.spmed.webApi.Domains.Medico)">
+            <summary>
+            Cadastra um novo médico
+            </summary>
+            <param name="novoMedico">Dados do novo médico</param>
+            <returns>Retorna um Status Code 201 - Created</returns>
+        </member>
+        <member name="M:senai.spmed.webApi.Controllers.MedicoController.Delete(System.Int32)">
+            <summary>
+            Deleta um médico
+            </summary>
+            <param name="id">Id do médico que será deletado</param>
+            <returns>Retorna Status Code 204 - NoContent</returns>
+        </member>
+        <member name="M:senai.spmed.webApi.Controllers.MedicoController.Put(System.Int32,senai.spmed.webApi.Domains.Medico)">
+            <summary>
+            Atualiza um médico
+            </summary>
+            <param name="id">Id do médico</param>
+            <param name="medicoAtualizado">Dados atualizados do médico</param>
+            <returns>Retorna Status Code 204 - NoContent</returns>
+        </member>
+        <member name="M:senai.spmed.webApi.Controllers.PacienteController.Get">
+            <summary>
+            Lista todos os pacientes
+            </summary>
+            <returns>Uma lista de pacientes e um Status Code 200 - Ok</returns>
+        </member>
+        <member name="M:senai.spmed.webApi.Controllers.PacienteController.GetById(System.Int32)">
+            <summary>
+            Busca por um paciente através de seu Id
+            </summary>
+            <param name="id">Id do paciente buscado</param>
+            <returns>Retorna um paciente buscado</returns>
+        </member>
+        <member name="M:senai.spmed.webApi.Controllers.PacienteController.Post(senai.spmed.webApi.Domains.Paciente)">
+            <summary>
+            Cadastra um novo paciente
+            </summary>
+            <param name="novoPaciente">Dados do novo paciente</param>
+            <returns>Status Code 201 - Created</returns>
+        </member>
+        <member name="M:senai.spmed.webApi.Controllers.PacienteController.Delete(System.Int32)">
+            <summary>
+            Deleta um paciente
+            </summary>
+            <param name="id">Id do paciente que será deletado</param>
+            <returns>Status Code 204 - NoContent</returns>
+        </member>
+        <member name="M:senai.spmed.webApi.Controllers.PacienteController.Put(System.Int32,senai.spmed.webApi.Domains.Paciente)">
+            <summary>
+            Atualiza um paciente
+            </summary>
+            <param name="id">Id do paciente</param>
+            <param name="paciente">Dados atualizados do paciente</param>
+            <returns>Status Code 204 - NoContent</returns>
         </member>
         <member name="M:senai.spmed.webApi.Controllers.TipoUsuarioController.Get">
             <summary>
