@@ -53,5 +53,11 @@ namespace senai.spmed.webApi.Interfaces
         /// <param name="id">Id do paciente</param>
         /// <returns>Retorna uma lista de consultas de um determinado paciente</returns>
         List<Consulta> listarPacientes(int id);
+        /// <summary>
+        /// Adiciona uma descrição para a consulta
+        /// </summary>
+        /// <param name="id">Id da consulta</param>
+        /// <param name="descricao">Descrição</param>
+        void descricaoConsulta(int id, Consulta descricao);
     }
 }

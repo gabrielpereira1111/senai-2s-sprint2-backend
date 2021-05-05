@@ -39,6 +39,34 @@
             <param name="clinicaAtualizada">Dados da clínica</param>
             <returns>Status Code 204 - NoContent</returns>
         </member>
+        <member name="M:senai.spmed.webApi.Controllers.ConsultaController.GetByPatient">
+            <summary>
+            Lista todas as consultas de determinado paciente
+            </summary>
+            <returns>Retorna a lista de consultas juntos com um Status Code 200 - Ok</returns>
+        </member>
+        <member name="M:senai.spmed.webApi.Controllers.ConsultaController.GetByDoctor">
+            <summary>
+            Lista os agendamentos de consulta relacionadas a um médico
+            </summary>
+            <returns>Uma lista com um Status Code 200 - Ok</returns>
+        </member>
+        <member name="M:senai.spmed.webApi.Controllers.ConsultaController.Patch(System.Int32,senai.spmed.webApi.Domains.Consulta)">
+            <summary>
+            Atualiza a descrição de uma consulta
+            </summary>
+            <param name="id">Id da consulta</param>
+            <param name="descricao">descrição</param>
+            <returns>Status Code 204 - NoContent</returns>
+        </member>
+        <member name="M:senai.spmed.webApi.Controllers.ConsultaController.PatchSituation(System.Int32,senai.spmed.webApi.Domains.Consulta)">
+            <summary>
+            Atualizar situação da consulta
+            </summary>
+            <param name="id">Id da consulta</param>
+            <param name="situacao">situação da consulta</param>
+            <returns></returns>
+        </member>
         <member name="M:senai.spmed.webApi.Controllers.EspecialidadeController.Get">
             <summary>
             Lista todos as especialidades
@@ -305,6 +333,13 @@
             </summary>
             <param name="id">Id do paciente</param>
             <returns>Retorna uma lista de consultas de um determinado paciente</returns>
+        </member>
+        <member name="M:senai.spmed.webApi.Interfaces.IConsultaRepository.descricaoConsulta(System.Int32,senai.spmed.webApi.Domains.Consulta)">
+            <summary>
+            Adiciona uma descrição para a consulta
+            </summary>
+            <param name="id">Id da consulta</param>
+            <param name="descricao">Descrição</param>
         </member>
         <member name="M:senai.spmed.webApi.Interfaces.IEspecialidadeRepository.Cadastrar(senai.spmed.webApi.Domains.Especialidade)">
             <summary>
