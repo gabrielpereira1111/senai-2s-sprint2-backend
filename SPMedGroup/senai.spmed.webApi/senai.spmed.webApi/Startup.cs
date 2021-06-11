@@ -50,6 +50,19 @@ namespace senai.spmed.webApi
                     ValidIssuer =           "spmed.webApi",
                     ValidAudience =         "spmed.webApi"
                 });
+
+            services.AddCors(options =>
+            {
+                options.AddPolicy("CorsPolicy", 
+                    builder =>
+                    {
+                        builder.WithOrigins("http://localhost:3000")
+                               .AllowAnyHeader()
+                               .AllowAnyMethod();
+                    }
+
+                    );
+            });
             
             // Register the Swagger generator, defining 1 or more Swagger documents
             services.AddSwaggerGen(c =>
@@ -75,6 +88,8 @@ namespace senai.spmed.webApi
             }
 
             app.UseRouting();
+
+            app.UseCors("CorsPolicy");
 
             app.UseAuthentication();
             app.UseAuthorization();
