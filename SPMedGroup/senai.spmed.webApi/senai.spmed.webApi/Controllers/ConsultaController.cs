@@ -192,7 +192,7 @@ namespace senai.spmed.webApi.Controllers
         /// </summary>
         /// <returns>Uma lista de consultas e um Status Code 200 - Ok</returns>
         [HttpGet]
-        [Authorize(Roles = "1")]
+        //[Authorize(Roles = "1")]
         public IActionResult Get()
         {
             try

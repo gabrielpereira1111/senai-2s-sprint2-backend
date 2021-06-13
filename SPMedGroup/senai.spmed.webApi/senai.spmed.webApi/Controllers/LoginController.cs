@@ -48,7 +48,8 @@ namespace senai.spmed.webApi.Controllers
                 {
                     new Claim(JwtRegisteredClaimNames.Email, usuario.Email),
                     new Claim(JwtRegisteredClaimNames.Jti, usuario.Idusuarios.ToString()),
-                    new Claim(ClaimTypes.Role, usuario.IdtiposUsuarios.ToString())
+                    new Claim(ClaimTypes.Role, usuario.IdtiposUsuarios.ToString()),
+                    new Claim("role", usuario.IdtiposUsuarios.ToString())
                 };
 
                 //chave autenticação

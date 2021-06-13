@@ -50,7 +50,7 @@ namespace senai.spmed.webApi.Repositories
                     consultaBuscada.Situacao = "Agendada";
                     break;
                 default:
-                    consultaBuscada.Situacao = consultaBuscada.Situacao;
+                    consultaBuscada.Situacao = "Agendada";
                     break;
             }
 
@@ -110,7 +110,7 @@ namespace senai.spmed.webApi.Repositories
         {
             return ctx.Consultas
                 .Include(c => c.IdmedicosNavigation)
-                .Where(c => c.Idpacientes == id)
+                .Where(c => c.IdpacientesNavigation.Idusuarios == id)
                 .ToList();
         }
 
@@ -125,6 +125,7 @@ namespace senai.spmed.webApi.Repositories
                     Idmedicos = c.Idmedicos,
                     Idpacientes = c.Idpacientes,
                     DataConsulta = c.DataConsulta,
+                    Situacao = c.Situacao,
                     IdmedicosNavigation = new Medico
                     {
                         Idmedicos = c.IdmedicosNavigation.Idmedicos,
